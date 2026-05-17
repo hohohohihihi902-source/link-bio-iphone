@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Premium Link Bio</title>
+    <!-- Import Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(180deg, #FF9E7A 0%, #FF4E8C 50%, #A349E5 100%);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* BINGKAI IPHONE */
+        .iphone-x {
+            position: relative;
+            width: 360px; /* Ukuran standar mockup HP */
+            height: 740px;
+            background: #000; /* Warna Bezel HP */
+            border-radius: 55px;
+            border: 12px solid #1a1a1a; /* Ketebalan Bezel */
+            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* DYNAMIC ISLAND (PONI IPHONE) */
+        .dynamic-island {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 10;
+        }
+
+        /* LAYAR DI DALAM HP */
+        .iphone-screen {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 50px 20px 20px 20px;
+            overflow-y: auto;
+            text-align: center;
+            scrollbar-width: none; /* Sembunyikan scrollbar */
+        }
+        .iphone-screen::-webkit-scrollbar { display: none; }
+
+        /* FOTO PROFIL */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .name {
+            color: white;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .verified { color: #2D9CDB; font-size: 16px; }
+
+        .bio {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        /* TOMBOL LINK HITAM SHINY */
+        .links-container { display: flex; flex-direction: column; gap: 12px; }
+
+        .link-item {
+            background: #000000; /* Hitam pekat */
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 18px; /* Lengkungan tepian */
+            font-weight: 700;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.15); /* Shiny border awal */
+            transition: all 0.3s ease;
+        }
+
+        /* Efek Kilatan saat di Hover */
+        .link-item:hover {
+            transform: scale(1.02);
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .link-item i {
+            position: absolute;
+            left: 18px;
+            font-size: 18px;
+        }
+
+        /* FOOTER ICONS */
+        .social-footer {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .social-footer a { color: white; font-size: 18px; opacity: 0.6; transition: 0.3s; }
+        .social-footer a:hover { opacity: 1; transform: translateY(-3px); }
+
+        .footer-logo {
+            margin-top: 25px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            display: block;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- IPHONE MOCKUP -->
+    <div class="iphone-x">
+        <div class="dynamic-island"></div>
+        
+        <!-- KONTEN LAYAR HP -->
+        <div class="iphone-screen">
+            
+            <img src="https://ui-avatars.com/api/?name=User&background=fff&color=000&size=200" alt="Avatar" class="profile-img">
+            
+            <div class="name">
+                Your Name <i class="fas fa-check-circle verified"></i>
+            </div>
+            <p class="bio">Creator • Artist • Designer</p>
+
+            <div class="links-container">
+                <a href="#" class="link-item">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                
+                <a href="#" class="link-item">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="#" class="link-item">
+                    <i class="fab fa-youtube"></i> YouTube Channel
+                </a>
+
+                <a href="#" class="link-item">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+
+                <a href="#" class="link-item">
+                    <i class="fas fa-globe"></i> Website
+                </a>
+            </div>
+
+            <div class="social-footer">
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <a href="#" class="footer-logo text-uppercase">
+                DIRECT.ME/PREMIUM
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
